@@ -1,0 +1,2 @@
+https://quotes.toscrape.com/
+http://books.toscrape.com/
