@@ -41,7 +41,6 @@ from scrapy_test.items import WebsiteItem
 #         yield item
 
 
-import sys
 import scrapy
 import re
 from urllib.parse import urljoin
@@ -52,12 +51,14 @@ class WebsiteSpider(scrapy.Spider):
 
     def __init__(self, *args, **kwargs):
         super(WebsiteSpider, self).__init__(*args, **kwargs)
-        self.urls = [url.strip() for url in sys.stdin]
+        self.urls_file = kwargs.get('urls_file')
 
     def start_requests(self):
-        for url in self.urls:
-            yield scrapy.Request(url=url, callback=self.parse)
+        with open(self.urls_file, 'r') as f:
+            urls = f.read().splitlines()
 
+        for url in urls:
+            yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
         # Extract phone numbers
@@ -73,4 +74,6 @@ class WebsiteSpider(scrapy.Spider):
         item['phone_numbers'] = cleaned_phone_numbers
         item['logo_urls'] = [urljoin(response.url, url) for url in logo_urls]
         yield item
+
+
 
