@@ -6,6 +6,7 @@ git clone https://gitlab.com/j.mpinheiros/scrapy-test.git
 ```
 # RUN
     scrapy crawl website -o output.json
+    scrapy crawl website -a urls_file=urls.txt -o output.json
 # Docker
     docker build -t scrapy_test .
     docker run scrapy_test
