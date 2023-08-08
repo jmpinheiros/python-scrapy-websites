@@ -1,2 +1,3 @@
-Scrapy==2.5.1
+Scrapy==2.10.0
+html2text==2020.1.16
 # Outras dependências do seu projeto
