@@ -90,3 +90,5 @@ ENV/
 
 # log
 scrapy_log.txt
+#
+output.json
