@@ -7,7 +7,7 @@ install requirements.txt with pip.
 
     pip install -r requirements.txt
 
-Put in urls.txt all your site to scrap, one per line.
+Put in urls.txt all the sites to scrap, one per line.
 
 # RUN
 with urls file
