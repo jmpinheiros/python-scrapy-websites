@@ -1,0 +1,19 @@
+# version: '3'
+# services:
+#   scrapy-app:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     volumes:
+#       - ./output:/app/output
+#     command: ["scrapy", "crawl", "website", "-a", "urls_file=urls.txt", "-o", "/app/output/output.json"]
+version: '3'
+services:
+  scrapy-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./output:/app/output
+    environment:
+      - URLS_FILE=urls.txt
