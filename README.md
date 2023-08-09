@@ -2,27 +2,8 @@
 
     git clone https://gitlab.com/j.mpinheiros/scrapy-test.git
 
-# BUILD
-install requirements.txt with pip.
-
-    pip install -r requirements.txt
-
-Put in urls.txt all the sites to scrap, one per line.
-
-# RUN
-with urls file
-
-    scrapy crawl website -a urls_file=urls.txt -o output.json
-
-with urls direct
-
-    scrapy crawl website -a urls="https://url01\nhttps://url02\nhttps://url03\" -o output.json
-
-# Docker
-    docker build -t scrapy_test .
-    docker run scrapy_test
-    docker cp <container_id>:/app/output.json output.json
-
+# RUN PROJECT with docker-compose
+    docker-compose up
 
 ## Project
 ```bash
@@ -39,3 +20,25 @@ SCRAPY-TEST/
     Dockerfile
     requirements.txt
 ```
+
+# ------More----------
+# BUILD
+install requirements.txt with pip.
+
+    pip install -r requirements.txt
+
+Put in urls.txt all the sites to scrap, one per line.
+
+# RUN
+with urls file
+
+    scrapy crawl website -a urls_file=urls.txt -o output.json
+
+with urls direct
+
+    scrapy crawl website -a urls="https://url01\nhttps://url02\nhttps://url03\" -o output.json
+
+# Only Dockerfile
+    docker build -t scrapy_test .
+    docker run scrapy_test
+    docker cp <container_id>:/app/output.json output.json
