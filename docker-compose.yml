@@ -6,3 +6,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./output:/app/output
+      - ./scrapy_test:/app/scrapy_test
+    environment:
+      - URLS_FILE=urls.txt
+    command: ["scrapy", "crawl", "website", "-o", "/app/output/output.json"]
