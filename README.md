@@ -18,6 +18,7 @@ SCRAPY-TEST/
         settings.py
     scrapy.cfg            
     Dockerfile
+    docker-compose
     requirements.txt
 ```
 
