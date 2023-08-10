@@ -4,6 +4,7 @@
 
 # RUN PROJECT with docker-compose
     docker-compose up
+    docker-compose down && docker-compose up --build
 
 ## Project
 ```bash
@@ -18,6 +19,7 @@ SCRAPY-TEST/
         settings.py
     scrapy.cfg            
     Dockerfile
+    docker-compose
     requirements.txt
 ```
 
