@@ -5,6 +5,6 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./output:/app/output
+      - ./output:/output
       - ./scrapy_test:/app/scrapy_test
-    command: ["scrapy", "crawl", "website", "-a", "urls_file=urls.txt"]
+    command: ["sh", "-c", "scrapy crawl website -a urls_file=urls.txt && mv /output.json /output/output.json"]
