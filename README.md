@@ -2,8 +2,24 @@
 
     git clone https://gitlab.com/j.mpinheiros/scrapy-test.git
 
+# URLs file
+
+- Put in urls.txt all the sites to scrap, one per line.
+
 # RUN PROJECT with docker-compose
     docker-compose up
+OR
+    docker-compose down && docker-compose up --build
+
+# Results
+
+- The result will be save in output/output.json file
+
+```bash
+    {"url": "https://",
+    "phone_numbers": ["(xxx) xxx xxxx"],
+    "logo_urls": ["https://"]}
+```
 
 ## Project
 ```bash
