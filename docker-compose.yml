@@ -7,4 +7,4 @@ services:
     volumes:
       - ./output:/output
       - ./scrapy_test:/app/scrapy_test
-    command: ["sh", "-c", "scrapy crawl website -a urls_file=urls.txt && mv /output.json /output/output.json"]
+    command: ["sh", "-c", "scrapy crawl website -a urls_file=urls.txt && cp /app/output.json /output/output.json"]
