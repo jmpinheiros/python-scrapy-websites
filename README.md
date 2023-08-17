@@ -6,7 +6,7 @@
     output file is made on the docker compose command line
 
 # branch = feature/scrapy_websites
-    output file is made on pipeline.py
+    output file is made on pipelines.py
 
 # URLs file
 
