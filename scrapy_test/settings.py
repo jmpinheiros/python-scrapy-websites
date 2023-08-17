@@ -12,6 +12,11 @@ BOT_NAME = "scrapy_test"
 SPIDER_MODULES = ["scrapy_test.spiders"]
 NEWSPIDER_MODULE = "scrapy_test.spiders"
 
+ITEM_PIPELINES = {
+    'scrapy_test.pipelines.JsonExportPipeline': 1,  # Use o caminho correto para a sua classe
+}
+
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "scrapy_test (+http://www.yourdomain.com)"
