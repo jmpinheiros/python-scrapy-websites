@@ -13,7 +13,7 @@ SPIDER_MODULES = ["scrapy_test.spiders"]
 NEWSPIDER_MODULE = "scrapy_test.spiders"
 
 ITEM_PIPELINES = {
-    'scrapy_test.pipelines.JsonExportPipeline': 1,  # Use o caminho correto para a sua classe
+    'scrapy_test.pipelines.JsonExportPipeline': 1,
 }
 
 
