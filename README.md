@@ -2,6 +2,12 @@
 
     git clone https://gitlab.com/j.mpinheiros/scrapy-test.git
 
+# branch = main
+    output file is made on the docker compose command line
+
+# branch = feature/scrapy_websites
+    output file is made on pipeline.py
+
 # URLs file
 
 - Put in urls.txt all the sites to scrap, one per line.
@@ -37,7 +43,7 @@ SCRAPY-TEST/
     requirements.txt
 ```
 
-# ------More----------
+# ------ More -- without docker----------
 # BUILD
 install requirements.txt with pip.
 
